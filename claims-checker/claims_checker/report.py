@@ -13,7 +13,7 @@ def load_claims(path):
 def total_billed(claims):
     total = 0.0
     for claim in claims:
-        total += float(claim["billed_amount"])
+        total += float(claim["billed_amount"].replace(",", ""))
     return total
 
 
